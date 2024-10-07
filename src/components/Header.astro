@@ -5,13 +5,9 @@ import { Icon } from 'astro-icon/components'
 ---
 
 <header>
-	<!-- <label class="switch">
-		<input type="checkbox" id="theme-toggle">
-		<span class="slider round"></span>
-	</label> -->
-
-	<label id="theme-switch" class="theme-switch" for="checkbox_theme">
+	<label id="switch" class="switch" for="checkbox_theme">
 		<input type="checkbox" id="checkbox_theme">
+		<span class="slider"></span>
 	</label>
 
 	<div class="header-section">
@@ -71,7 +67,7 @@ import { Icon } from 'astro-icon/components'
 	})
 
 	//identify the toggle switch HTML element
-	const toggleSwitch = document.querySelector('#theme-switch input[type="checkbox"]') as HTMLInputElement;
+	const toggleSwitch = document.querySelector('#switch input[type="checkbox"]') as HTMLInputElement;
 
 	//function that changes the theme, and sets a localStorage variable to track the theme between page loads
 	function switchTheme(e) {
